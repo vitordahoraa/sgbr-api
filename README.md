@@ -10,19 +10,23 @@ Necessário ter docker instalado préviamente. Caso esteja sendo utilizando um sis
 
 3° Passo: Rodar o comando a seguir no terminal com WSL(windows).
 
-'''
+```
 sudo ./vendor/bin/sail up
 
-'''
+```
 
 ## ENDPOINTS
 
 Existe um arquivo .JSON (Localhost.postman_collection(2).json) com todas as rotas implementadas apontado para o localhost.
 
 # GET
+
 /api/v1/local
+
 /api/v1/local/$id
+
 /api/v1/local?query
+
 Filtros implementados para campos string: eq (equal), ne (not equal).
 Filtros implementados para campos datetime: eq (equal), ne (not equal), gt (greater then), lt (lesser then), lte (lesser then or equal), gte (greater then or equal).
 
@@ -40,7 +44,7 @@ Filtros implementados para campos datetime: eq (equal), ne (not equal), gt (grea
 Para rodas os testes unitários implementados, rodar o seguinte comando no terminal apontado para o projeto.
 
 
-'''
+```
 sudo ./vendor/bin/sail test
 
-'''
+```
