@@ -1,0 +1,177 @@
+{
+	"info": {
+		"_postman_id": "1c132f51-3ba3-4296-9f16-f47a3655bd79",
+		"name": "Localhost",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16027620"
+	},
+	"item": [
+		{
+			"name": "Post Local",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Joao\",\r\n    \"city\" : \"Itajai\",\r\n    \"state\" : \"Santa Catarina\",\r\n    \"slug\" : \"postman\"\r\n    \r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost/api/v1/local",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"v1",
+						"local"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Local all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/api/v1/local",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"v1",
+						"local"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Local id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/api/v1/local/1",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"v1",
+						"local",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Local filter",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/api/v1/local?name[eq]=joao&createdAt[gte]=2023-06-23T04:30:39",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"v1",
+						"local"
+					],
+					"query": [
+						{
+							"key": "name[eq]",
+							"value": "joao"
+						},
+						{
+							"key": "createdAt[gte]",
+							"value": "2023-06-23T04:30:39"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Patch Local",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Joe\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost/api/v1/local/1",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"v1",
+						"local",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Local",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost/api/v1/local/5",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"v1",
+						"local",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
